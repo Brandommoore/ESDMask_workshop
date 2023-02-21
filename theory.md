@@ -1,10 +1,18 @@
 # How to generate a copy generator vertex in Blender.
 
+    HELPER!
+    
     Al hablar de nodos, al añadir, y unir vamos a seguir la siguiente regla.
 
         - A: Add    --> Añadir new nodo
         - I: In     --> Entrada al nodo
         - O: Out    --> Salida del nodo
+
+    Ejemplo:
+
+    Para decir que hay que unir la propiedad location del nodo de la esfera a la propiedad geometry del nodo group geometry, lo hariamos de este modo:
+
+        [Sphere] O: Location --> [Group geometry] I: Geometry
 
 ## Generando con geometry nodes.
 
@@ -14,4 +22,6 @@ Vamos a generar un matrix copy de objetos sobre un face de una mesh. Para ello v
 
 2. Añadimos al graph los dos objetos que queremos clonar (el cloner, y el objeto a clonar).
 
-3. Añadimos nodo --> Instance_to_points. Unimos el 
+3. A: Instance_to_points.
+    1. []
+    2. 
