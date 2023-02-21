@@ -25,7 +25,12 @@ Vamos a generar un matrix copy de objetos sobre un face de una mesh. Para ello v
 3. A: Instance_on_Points.
     1. [Cloner] O: Geometry --> [Instance_on_Points] I: Points
     2. [OClo] O: Geometry --> [Instance_on_Points] I: Instance
+    3. [Oclo] Original -> Relative
 
+4. A: Normal
+5. A: Align_Euler_to_Vector
+    1. [Normal] O: Normal --> [Align_Euler_to_Vector] I: Vector
+    2. [Align_Euler_to_Vector] O: Rotation --> [Instance_on_Points] I: Rotation
 
 
 
