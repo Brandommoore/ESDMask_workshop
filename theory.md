@@ -20,8 +20,19 @@ Vamos a generar un matrix copy de objetos sobre un face de una mesh. Para ello v
 
 1. Generamos un nuevo **geometry_node** sobre un objeto (por ejemplo un rectangulo). (Creamos el rectangulo y le añadimos un modificador "_geometry_node_") 
 
-2. Añadimos al graph los dos objetos que queremos clonar (el cloner, y el objeto a clonar).
+2. Añadimos al graph los dos objetos que queremos clonar (el cloner [Cloner], y el objeto a clonar [OClo]).
 
 3. A: Instance_to_points.
-    1. []
-    2. 
+    1. [Cloner] O: Geometry --> [Instance_to_points] I: Points
+    2. [OClo] O: Geometry --> [Instance_to_points] I: Instance
+
+
+
+
+
+
+> Respecto al video:
+
+> Cloning cube es el objeto a clonar
+
+> Sphere es el cloner
