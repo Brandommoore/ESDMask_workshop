@@ -22,9 +22,9 @@ Vamos a generar un matrix copy de objetos sobre un face de una mesh. Para ello v
 
 2. Añadimos al graph los dos objetos que queremos clonar (el cloner [Cloner], y el objeto a clonar [OClo]).
 
-3. A: Instance_to_points.
-    1. [Cloner] O: Geometry --> [Instance_to_points] I: Points
-    2. [OClo] O: Geometry --> [Instance_to_points] I: Instance
+3. A: Instance_on_Points.
+    1. [Cloner] O: Geometry --> [Instance_on_Points] I: Points
+    2. [OClo] O: Geometry --> [Instance_on_Points] I: Instance
 
 
 
