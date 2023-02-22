@@ -19,4 +19,11 @@ Creamos los pendientes (modelamos) y cuando esten creados (importados) hacemos l
 
 ## Physics in Spark
 
-Una vez importado el objeto seguimos la siguiente estruuctura de nodos.
+Una vez importado el objeto seguimos la siguiente estructura de nodos.
+
+    Leyenda de creacion y union de nodos
+        - A: Add
+        - I: In
+        - O: Out
+
+        [Face Finder] O: Faces --> [Face Select] I: Faces
