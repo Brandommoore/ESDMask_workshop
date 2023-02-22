@@ -53,3 +53,5 @@ Para añadir fisicas (emuladas) al objeto, seguimos el siquiente esquema:
         3. [BOTTOM Pack (Group)] O: Out --> [Substract] I: Second Value
         4. A: [Multiply] (Vec3)
         5. [Substract] O: Out --> [Multiply] I: First Value (Multiply value = 3) 
+
+    -- Al tener todo este flujo, extraemos las rotaciones de cada bone y las unimos al [Multiply] OUT --
