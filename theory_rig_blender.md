@@ -35,8 +35,21 @@ Para añadir fisicas (emuladas) al objeto, seguimos el siquiente esquema:
     1. A: x2 [Unpack]
     2. [Face Tracker] O: 3D Rotation --> [Unpack] I: Value
 
-    -- Hacer lo mismo por cada unpack --
+    -- Hacer lo mismo por cada unpack (Colocar uno debajo del otro) --
 
         1. x2 A: [Exponential Smoothing] (Colocar uno debajo del otro)
-        2. [Unpack] O: x --> [TOP Exponential Smoothing] I: Input | Damping (**valor_indicado_abajo**) 
-        2. [Unpack] O: y --> [BOTTOM Exponential Smoothing] I: Input | Damping (**valor_indicado_abajo**) 
+        2. [Unpack] O: x --> [TOP Exponential Smoothing] I: Input | Damping (**valor_indicado_abajo**)
+        3. [Unpack] O: y --> [BOTTOM Exponential Smoothing] I: Input | Damping (**valor_indicado_abajo**)
+        4. A: [Pack]
+        5. [TOP Exponential Smoothing] O: Output --> [Pack] I: Z Value
+        6. [BOTTOM Exponential Smoothing] O: Output --> [Pack] I: X Value
+
+        === Damping: 1º group --> Value = 200 / 1º group --> Value = 90 ===
+
+    -- Cuando acabamos estos dos grupos identicos --
+
+        1. A: [Substract] (Vec3)
+        2. [TOP Pack (Group)] O: Out --> [Substract] I: First Value
+        3. [BOTTOM Pack (Group)] O: Out --> [Substract] I: Second Value
+        4. A: [Multiply] (Vec3)
+        5. [Substract] O: Out --> [Multiply] I: First Value (Multiply value = 3) 
