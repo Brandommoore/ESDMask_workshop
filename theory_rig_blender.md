@@ -27,3 +27,16 @@ Una vez importado el objeto seguimos la siguiente estructura de nodos.
         - O: Out
 
         [Face Finder] O: Faces --> [Face Select] I: Faces
+
+Para añadir fisicas (emuladas) al objeto, seguimos el siquiente esquema:
+
+    0. Añadimos el Face_tracker al patch editor
+
+    1. A: x2 [Unpack]
+    2. [Face Tracker] O: 3D Rotation --> [Unpack] I: Value
+
+    -- Hacer lo mismo por cada unpack --
+
+        1. x2 A: [Exponential Smoothing] (Colocar uno debajo del otro)
+        2. [Unpack] O: x --> [TOP Exponential Smoothing] I: Input | Damping (**valor_indicado_abajo**) 
+        2. [Unpack] O: y --> [BOTTOM Exponential Smoothing] I: Input | Damping (**valor_indicado_abajo**) 
