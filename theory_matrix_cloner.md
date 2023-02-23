@@ -32,12 +32,9 @@ Vamos a generar un matrix copy de objetos sobre un face de una mesh. Para ello v
         1. [Normal] O: Normal --> [Align_Euler_to_Vector] I: Vector
         2. [Align_Euler_to_Vector] O: Rotation --> [Instance_on_Points] I: Rotation
     
+Podemos modificar la posicion, rotacion y escala añadiendo los modificadores de instancias. Para terminar y poder extraer una mesh:
 
-
-
-
-> Respecto al video:
-
-> Cloning cube es el objeto a clonar
-
-> Sphere es el cloner
+    1. A: [Intanciate Intances] (Union between or graph and the output geometry)
+    
+Al finalizar --> [F3] --> Mesh Convert
+    
